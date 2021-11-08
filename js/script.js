@@ -127,11 +127,32 @@ for(i = 0; i < icons.length; i++){
     const color = oggetto.color;
 
     document.getElementById("container").innerHTML += `<div class="box">
-    <i class="${family} ${prefix}${name}"></i>
-    <h2>${name}</h2>
+    <i class="${icons[i].family} ${icons[i].prefix}${icons[i].name} ${icons[i].color}"></i>
+    <h2>${icons[i].name}</h2>
 </div>`;
     
 };
-    
 
+//cercare di filtrare le icone in base alla scelta dell'utente
+
+//collegare costante al select
+const select = document.getElementById("iconselect");
+
+const animal = document.querySelector(".animal");
+const veg = document.querySelector(".veg");
+const users = document.querySelector(".users");
+
+function filterAnimal(){
+    veg.classList.add(".off");
+    users.classList.add(".off");
+}
+function filterVeg(){
+    animal.classList.add(".off");
+    users.classList.add(".off");
+}
+function filterUsers(){
+    animal.classList.add(".off");
+    veg.classList.add(".off");
+}
+    
 
