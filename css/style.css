@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+    flex-wrap: wrap;
+}
+
+
+.box{
+    text-align: center;
+    height: 200px;
+    width: calc(90% / 5);
+    border: black solid 1px;
+    background-color: whitesmoke;
+    
+}
+
+.box i{
+    margin-top: 70px;
+    font-size: 50px;
+}
